@@ -11,12 +11,10 @@ import {
 } from "./styles";
 
 const ProductItem = ({ product }: any) => {
-  const addToCart = useCartStore((state) => state.add); // Obtenha a função add do hook useCartStore
+  const addToCart = useCartStore((state) => state.add);
 
   const handleAddToCart = () => {
-    addToCart(product); // Adicione o produto ao carrinho ao clicar no botão "COMPRAR"
-    console.log("Produtos no carrinho:", useCartStore.getState().cart);
-    console.log("clicou");
+    addToCart(product);
   };
 
   return (

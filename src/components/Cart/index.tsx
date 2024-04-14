@@ -27,7 +27,6 @@ const Cart = ({ onClose }: any) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    // Atualiza o total sempre que o carrinho mudar
     const newTotal = cart.reduce(
       (acc, curr) => acc + Number(curr.price) * curr.quantity,
       0
